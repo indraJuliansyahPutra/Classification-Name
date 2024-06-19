@@ -67,5 +67,14 @@ def main():
                 else:
                     st.markdown(f'**Nama:**\n{name}\n\n**Prediksi Jenis Kelamin:** <span style="color: green;">{gender_label}</span>', unsafe_allow_html=True)
 
+                # Tambahkan tombol "Sesuai" dan "Tidak Sesuai"
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.button('Sesuai'):
+                        st.success('Terima kasih atas konfirmasinya! Kami senang prediksi kami sesuai dengan harapan Anda.')
+                with col2:
+                    if st.button('Tidak Sesuai'):
+                        st.error('Maaf atas ketidakakuratan prediksi kami. Kami akan terus berusaha untuk meningkatkan model kami.')
+
 if __name__ == '__main__':
     main()
