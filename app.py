@@ -36,12 +36,14 @@ def main():
         st.subheader('Predict Jenis Kelamin')
 
         # Pilihan model
-        model_type = st.selectbox('Pilih Model', ['Random Forest', 'Naive Bayes'])
+        model_type = st.selectbox('Pilih Model', ['Random Forest', 'Naive Bayes', 'Decision Tree'])
 
         if model_type == 'Random Forest':
             model_path = 'Random Forest//rf.pkl'
         elif model_type == 'Naive Bayes':
             model_path = 'Naive Bayes//nb.pkl'
+        elif model_type == 'Decision Tree':
+            model_path = 'Decision Tree//decision_tree.pkl'
 
         # Memuat model
         model = load_model(model_path)
